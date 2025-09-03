@@ -1,0 +1,60 @@
+"synchronized is the simplest way to achieve mutual exclusion in Java.
+It’s built into the language and managed by the JVM.
+However, it doesn’t support advanced features like interruptible
+lock acquisition or timeout-based attempts to get a lock.
+
+On the other hand, ReentrantLock provides more fine-grained control.
+It allows you to try to acquire a lock without waiting indefinitely,
+supports fairness policies, and can be interrupted while waiting.
+It also supports multiple condition variables for complex thread coordination."
+
+
+public class LockComparison {
+
+    private int count = 0;
+    private final Object syncLock = new Object();
+    private final Lock reentrantLock = new ReentrantLock();
+
+    // Using synchronized block
+    public void incrementWithSynchronized() {
+        synchronized (syncLock) {
+            count++;
+            System.out.println("Synchronized count: " + count);
+        }
+    }
+
+    // Using ReentrantLock
+    public void incrementWithReentrantLock() {
+        reentrantLock.lock();  // acquire lock
+        try {
+            count++;
+            System.out.println("ReentrantLock count: " + count);
+        } finally {
+            reentrantLock.unlock(); // release lock
+        }
+    }
+
+    public static void main(String[] args) {
+        LockComparison example = new LockComparison();
+
+        // Using synchronized
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 5; i++) {
+                example.incrementWithSynchronized();
+                try { Thread.sleep(50); } catch (InterruptedException ignored) {}
+            }
+        });
+
+        // Using ReentrantLock
+        Thread t2 = new Thread(() -> {
+            for (int i = 0; i < 5; i++) {
+                example.incrementWithReentrantLock();
+                try { Thread.sleep(50); } catch (InterruptedException ignored) {}
+            }
+        });
+
+        t1.start();
+        t2.start();
+    }
+}
+
