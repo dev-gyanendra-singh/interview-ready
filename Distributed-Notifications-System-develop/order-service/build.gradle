@@ -1,0 +1,80 @@
+plugins {
+	id 'java'
+	id 'application'
+	id 'org.springframework.boot' version '3.3.5'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.bhaskarblur'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(23)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('springCloudVersion', "2023.0.3")
+	set("jakarta-servlet.version", '5.0.0')
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	implementation 'me.paulschwarz:spring-dotenv:2.5.4'
+	implementation 'org.glassfish.jersey.core:jersey-common:3.0.2'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	// Jersey dependencies for enabling JAX-RS with Jakarta in Spring Boot
+	implementation 'org.glassfish.jersey.containers:jersey-container-servlet-core:3.0.0'
+	implementation 'org.glassfish.jersey.inject:jersey-hk2:3.0.0'
+	// Jakarta RESTful Web Services API
+	implementation 'jakarta.ws.rs:jakarta.ws.rs-api:3.0.0'
+
+	// Jakarta Servlet API (optional, if you need HttpServletRequest)
+	implementation 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+
+	// Spring Boot dependencies
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// Jersey dependencies for Jakarta REST support
+	implementation 'org.glassfish.jersey.containers:jersey-container-servlet-core:3.0.0'
+	implementation 'org.glassfish.jersey.inject:jersey-hk2:3.0.0'
+
+	// Jakarta RESTful Web Services API (for REST annotations)
+	implementation 'jakarta.ws.rs:jakarta.ws.rs-api:3.0.0'
+
+	// Jakarta Servlet API (for HttpServletRequest)
+	implementation 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+
+	implementation 'jakarta.ws.rs:jakarta.ws.rs-api:3.0.0'
+	implementation 'jakarta.annotation:jakarta.annotation-api:2.0.0'
+
+	// Spring Boot MongoDB and Kafka dependencies
+	implementation 'org.springframework.kafka:spring-kafka'
+
+	// Add Gson dependency for JSON serialization/deserialization
+	implementation 'com.google.code.gson:gson:2.8.9' // Use the latest version
+
+	// Add Spring Web dependency for REST controller support
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Testing dependencies
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testImplementation 'org.eclipse.jetty:jetty-server:11.0.14'
+	testImplementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
