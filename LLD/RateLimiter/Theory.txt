@@ -1,0 +1,16 @@
+1. Implemented to avoid DDOS attack
+
+Algorithms
+1. Token bucket
+   -> maintain a token bucket which adds the fixed number of tokens per minute, and use token to call api
+   -> if all the tokens are used in particular interval then return http status code 429(too many requests)
+   Limitation: although allows peaky burst but steady rate can be low, not suitable where strict throttling is needed, such as payment gateways or authentication endpoints, requires redis for maintaining token in distributed system
+2. Leaking bucket: uses queue fir coming requests... api will process at constant rate... if queue is full then requests will be discarded i.e. 429
+3. Fixed window counter: a fixed window of time will have a counter.....if requests comes at the very end of timeframe then api will be loaded in the next timeframe
+4. Sliding window log: timeframe ki window hogi usme saari requests ko log krte jainge... jo bhi fixed number of allowed requests hongi unhe reject kr denge lekin log jarur krenge... jese hi window ka time khatm hoga previous logged requests ko htainge... Drawback: reject krne k baad log kr de rhe..space bhar skta
+5. Sliding window counter:= Fixed window counter + Sliding window log(solves double number of requests when come at the end):
+
+Using centralized cache i.e. Redis Atomicity can be hurt but there are already some solutions available which adds some latency==>  MULTI
+                                                                                                                                    GET mykey
+                                                                                                                                    SET mykey newvalue
+                                                                                                                                    EXEC
