@@ -1,0 +1,43 @@
+\documentclass[11pt]{letter}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{lmodern}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+}
+
+\begin{document}
+
+% Contact Info
+Gyanendra Singh \\
+Phone: +91-zzz-yyyy-xxx \\
+Email: \href{mailto:singhgyanendra583@gmail.com}{singhgyanendra583@gmail.com} \\
+LinkedIn: \href{https://linkedin.com/in/dev-gyanendra-singh}{linkedin.com/in/dev-gyanendra-singh} \\
+GitHub: \href{https://github.com/dev-gyanendra-singh}{github.com/dev-gyanendra-singh} \\[1em]
+
+Sept 05, 2025
+
+\vspace{1em}
+
+Dear Hiring Manager,
+
+\bigskip
+
+I am writing to express my interest in the Backend Engineer position. With over 3 years of hands-on experience in building scalable, secure, and high-performance backend systems at Bosch Global Software Technologies, I bring a deep expertise in Java, Spring Boot, microservices architecture, and AWS-based cloud development that aligns well with your organization’s goals.
+
+At Bosch, I have led the development of RESTful APIs for vehicle security systems, optimized latency by over 60\% using Redis caching, and implemented robust authentication mechanisms using JWT and RBAC. My contributions extended beyond coding, including upgrading cryptographic standards (AES-256, PBKDF2), containerizing legacy Java apps with Docker, and mentoring junior developers in Agile environments. These experiences have strengthened my ability to deliver enterprise-grade backend solutions that are both performant and secure.
+
+I take pride in applying best practices in DevOps and testing—utilizing tools like Jenkins, GitHub Actions, RestAssured, JUnit, and SonarQube—to ensure maintainability and CI/CD compliance. I’ve also developed large-scale side projects, such as an AI-based crypto trading platform and a hybrid recommender system, which reinforce my ability to build and ship production-ready features independently.
+
+As an IIT (BHU) graduate with a strong academic foundation in Electrical Engineering (CGPA: 8.95), I pair engineering rigor with practical industry experience. I am particularly excited by opportunities that challenge me to build distributed systems, solve performance bottlenecks, and lead backend modernization efforts.
+
+I would welcome the opportunity to discuss how my skills and experience can contribute to your team’s success. Thank you for considering my application.
+
+\bigskip
+
+Sincerely, \\
+Gyanendra Singh
+
+\end{document}

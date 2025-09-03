@@ -1,0 +1,179 @@
+
+%-------------------------
+% Resume in LaTeX - ATS Optimized
+% Author : Gyanendra Singh
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{fontawesome}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge \scshape Gyanendra Singh} \\ \vspace{5pt}
+  \small
+  \mbox{Phone: +91-xyz-zyzz-zzz} \quad $|$ \quad
+  \mbox{Email: \href{mailto:singhgyanendra583@gmail.com}{singhgyanendra583@gmail.com}} \quad $|$ \quad
+  \mbox{LinkedIn: \href{https://linkedin.com/in/dev-gyanendra-singh}{linkedin.com/in/dev-gyanendra-singh}} \quad $|$ \quad
+  \mbox{GitHub: \href{https://github.com/dev-gyanendra-singh}{github.com/dev-gyanendra-singh}}
+\end{center}
+
+
+
+\centerline{Backend Engineer \quad | \quad Java \quad | \quad Spring Boot \quad | \quad AWS}
+\centerline{Microservices \quad | \quad CI/CD \quad | \quad API Security}
+\vspace{4pt}
+
+
+
+\section{Professional Summary}
+\noindent
+Results-driven backend engineer with 2+ years of experience designing scalable, secure, and high-performance systems. Skilled in Java, Spring Boot, REST APIs, microservices architecture, AWS cloud services, and Docker. Proven track record of optimizing latency, improving SQL performance, and enforcing security best practices in production environments.
+
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology (BHU)}{Varanasi, India}
+      {B.Tech in Electrical Engineering | CGPA: 8.95/10}{July 2018 -- June 2022}
+    \resumeSubheading
+      {CBSE Senior Secondary (12th Grade)}{Vrindavan, India}
+      {Percentage: 91.20\%}{2017}
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{
+    \item{
+      \textbf{Languages}: Java, Python, C/C++, SQL \\
+      \textbf{Backend}: Spring Boot, REST APIs, Microservices, Kafka, Servlets/JSP, Event-Driven Architecture \\
+      \textbf{Cloud \& DevOps}: AWS (EC2, Lambda, S3, Lightsail), Docker, Jenkins, GitHub Actions \\
+      \textbf{Security}: OAuth2, JWT, Cryptography (AES, PBKDF2), Secure API Design, RBAC \\
+      \textbf{Testing}: JUnit, Mockito, RestAssured, Selenium, ReadyAPI (SOAP) \\
+      \textbf{Databases}: Oracle, MongoDB (NoSQL) \\
+      \textbf{Tools}: IntelliJ, Postman, SwaggerUI, Git, Bitbucket, Jira, SonarQube, ELK Stack \\
+      \textbf{Concepts}: OOP, Data Structures \& Algorithms, Design Patterns, Distributed Systems
+    }
+  }
+\end{itemize}
+
+
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Senior Engineer}{Aug 2022 -- Present}
+    {Bosch Global Software Technologies}{Hyderabad, India}
+    \resumeItemListStart
+      \resumeItem{Designed and developed 12+ RESTful APIs for vehicle security systems using Spring Boot, compliant with OpenAPI specifications}
+      \resumeItem{Implemented JWT-based authentication and Role-Based Access Control (RBAC) for 3 user roles, enhancing security enforcement}
+      \resumeItem{Reduced API response latency by 60\% by leveraging Redis caching and optimizing SQL query structures}
+      \resumeItem{Upgraded encryption modules with AES-256 and PBKDF2 algorithms to comply with latest cryptographic standards}
+      \resumeItem{Applied Strategy Design Pattern to modularize cryptographic algorithm selection, improving maintainability}
+      \resumeItem{Migrated REST API testing to RestAssured framework, increasing automated test coverage by 30\%}
+      \resumeItem{Enabled lazy loading in high-traffic modules, reducing memory usage and page load times by 20\%}
+      \resumeItem{Dockerized 3 legacy Java applications to streamline deployment, reducing downtime across CI/CD pipelines}
+      \resumeItem{Enhanced SQL performance for analytics reporting by implementing indexes and materialized views}
+      \resumeItem{Monitored and patched vulnerable dependencies proactively to maintain application security and compliance}
+      \resumeItem{Mentored 2 interns on Spring Boot development, clean code practices, and Agile/Scrum workflows}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineering Intern}{June 2021}
+    {Company Name}{London}
+    \resumeItemListStart
+      \resumeItem{Developed a Kafka + Spring Boot notification system capable of handling over 1000 concurrent users}
+      \resumeItem{Achieved 85\% unit test coverage using JUnit5 and Mockito, improving regression stability}
+      \resumeItem{Optimized system performance by reducing average latency from 2s to 200ms using caching and DB connection pooling}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{AI Crypto Trading Platform} \emph{(Spring Boot, React, MySQL, Stripe, Razorpay)}}{Jan 2024}
+      \resumeItemListStart
+        \resumeItem{Built real-time AI-powered chatbot using Gemini and CoinGecko APIs}
+        \resumeItem{Developed secure trading system with 2FA, encrypted logs, and transaction history}
+        \resumeItem{Implemented digital wallet functionality: transfers, deposits, withdrawals}
+        \resumeItem{Integrated multiple payment gateways (Stripe, Razorpay) into React frontend}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{E-Commerce Recommender System} \emph{(Python, SVD, ResNet50)}}{Jan 2021}
+      \resumeItemListStart
+        \resumeItem{Built hybrid recommendation engine (content + collaborative) improving accuracy by 22\%}
+        \resumeItem{Extracted visual similarity from product images using ResNet50 CNN}
+        \resumeItem{Applied SVD for collaborative filtering on user-product matrix}
+        \resumeItem{Visualized embeddings using t-SNE to interpret model behavior}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Achievements}
+  \begin{itemize}[leftmargin=0.15in, label=\raisebox{0.25ex}{\tiny\textbullet}]
+    \item \small{Recipient of Team Excellence Award at Bosch for impact and code quality (2024)}
+    \item \small{Cybersecurity Community SPOC at Bosch Global Software (2023–Present)}
+    \item \small{Finalist, SAE Aero Design Competition (2022)}
+    \item \small{Represented IIT BHU at DRDO SASE Fleet Challenge, Inter IIT TechMeet (2020)}
+  \end{itemize}
+
+\end{document}
